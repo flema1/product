@@ -1,56 +1,32 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-//const googleTrends = require('google-trends-api');
-
-import googleTrends from 'google-trends-api'; 
-
-
-
-
-function bob (x){
-  googleTrends.interestOverTime({keyword: ['Women\'s march', 'Trump Inauguration']})
-.then(function(results){
-  x=results;  
-  console.log('These results are awesome', results);
-})
-.catch(function(err){
-  console.error('Oh no there was an error', err);
-});
-}
-
-function Stats() {
-  let x=null; 
-  bob(x);
-console.log ("bob"); 
-  return (
-    <h1>{x}</h1>
-  )
-}
-
+import axios from 'axios';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import Nav from './components/NavBar';
+import Home from './containers/Home';
+import Products from './containers/Products';
 
 class App extends Component {
-
-
-
-
-
-
-
-
-
+componentWillMount(){
+  axios.get(`/products`)
+    .then(res => {
+      console.log (res, "res")
+    }).catch(err => console.log(err));
+}
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+     <Router>
+        <div className="App">
+          <Nav/>
+           <Route exact path={"/Home"} component={Home}/>
+           <Route exact path={"/Products"} component={Products}/>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Stats/>
-      </div>
+      </Router>
     );
   }
 }
