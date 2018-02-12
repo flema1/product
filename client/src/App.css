@@ -22,3 +22,42 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+
+#side-menu ul {
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+#side-menu li {
+  list-style: none;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+#side-menu a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+  display: block;
+  text-align:left;
+  /*background-color: #dddddd;*/
+}
+
+
+#login-container {
+ width: 300px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-content: center;
+}
+
+#btn-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
