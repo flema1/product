@@ -7,8 +7,6 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { register } from './actions/authActions';
 import Auth from './modules/Auth';
 import SideNav from './components/SideNav';
 import Header from './components/Header';
@@ -65,15 +63,3 @@ class App extends Component {
 }
 
 export default App;
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     registerUser: (user) => {
-//       dispatch(register(user))
-//     }
-//   }
-// }
-
-// export default connect(/*mapStateToProps*/ null, mapDispatchToProps)(RegisterPage);
-
-
