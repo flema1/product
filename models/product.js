@@ -10,6 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     price: DataTypes.DECIMAL(5, 2),
     rating: DataTypes.DECIMAL(2, 1),
     stock: DataTypes.INTEGER, 
+    image: DataTypes.STRING,
   }, {
     timestamps: false,
     freezeTableName: true,
