@@ -22,8 +22,10 @@ export const fetchProducts = (dispatch) =>
     dispatch(requestProducts())
     axios.get('/products/all')
       .then(res => {
+        localStorage.setItem('cart',res.data)
         dispatch(receiveProducts(res.data))
       })
   }
+
 
 

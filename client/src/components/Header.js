@@ -27,7 +27,7 @@ import axios from 'axios';
   componentDidMount() {
     // document.body.scrollTop = 0;
     // document.querySelector('.menu').classList.remove('open');
-    alert('c')
+    // alert('c')
     //if (this.state.auth) {
       axios.get('/auth/checkloggedIn').then(res => {
         console.log(res, "header res--------------->");
@@ -112,8 +112,8 @@ import axios from 'axios';
     if (this.props.isLoginSuccess || this.state.auth) {
             return ( <div className="menu"><Link to="/profile"><Ionicons.MdPersonOutline width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/></Link>
         <Ionicons.MdFavoriteOutline width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
-        <Ionicons.MdShoppingCart width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
-        <a href='http://localhost:3001/auth/logout' >logoutd</a>
+         <Link to="/cart"><Ionicons.MdShoppingCart width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/></Link>
+        <a href='http://localhost:3001/auth/logout' >logout</a>
          {/*<button href='http://localhost:3001/logout' className="btn btn-primary" onClick={()=>this.props.logOutUser()}>log out</button>*/}
         
 

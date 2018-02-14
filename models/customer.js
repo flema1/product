@@ -50,19 +50,28 @@ module.exports = function (sequelize, DataTypes) {
     freezeTableName: true,
     tableName: 'customer'
   }, {
-    classMethods: {
-      associate: function (models) {
-        // associations can be defined here
-      }
-    }
+    // classMethods: {
+    //   associate: function (models) {
+    //     // associations can be defined here
+    //   }
+    // }
   });
-//   Customer.associate = function (models) {
-//     Customer.hasMany(models.Order, {
-//       foreignKey: {
-//         name: 'customerId',
-//         field: 'customer_id',
-//       },
-//     });
-//   }
+  // Customer.associate = function (models) {
+  //   Customer.hasMany(models.Order, {
+  //     foreignKey: {
+  //       name: 'customerId',
+  //       field: 'customer_id',
+  //     },
+  //   });
+  // }
   return Customer;
 };
+
+
+// module.exports.associations = (User, { OAuth, Order, Review, Payment }) => {
+// //User.hasOne(OAuth)
+//   //User.hasMany(Order)
+//  // User.hasMany(Review)
+//  // User.hasOne(Payment)
+//   //User.belongsToMany(Thing, {as: 'favorites', through: Favorite})
+// }
