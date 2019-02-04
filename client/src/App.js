@@ -15,7 +15,8 @@ import Home from './containers/Home';
 import Products from './containers/Products';
 import Profile from './containers/Profile';
 import RegisterPage from './containers/RegisterPage';
-
+import ProductPage from './components/ProductPage';
+import CartContainer from './containers/CartContainer'
 
 class App extends Component {
    constructor(props) {
@@ -56,6 +57,8 @@ class App extends Component {
           <Route exact path = {"/login"} component={Login}/>
           <Route exact path = {"/profile"} component={Profile}/>
           <Route exact path ={"/register"} component={RegisterPage}/>
+          <Route path="/products/:index" component={ProductPage}/>
+          <Route path="/cart" component={CartContainer}/>
         </div>
       </Router>
     );

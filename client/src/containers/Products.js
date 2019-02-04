@@ -3,6 +3,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/productsActions';
 import { bindActionCreators } from 'redux'; /* code change */
+import Product from '../components/Product';
 
 class Products extends Component {
   constructor(props) {
@@ -20,10 +21,10 @@ class Products extends Component {
     console.log(this.state.products,'products')
      
     return (
-      <main className="main">
+      <main className="main" style={{display:'flex',flexWrap: 'wrap'}}>
          {
-           this.props.products.map((product)=>{
-             return (<img src={product.image} style={{ width:'200px', height:'200px'}} alt="boohoo" className="img-responsive"/>)
+           this.props.products.map((product, index)=>{
+             return (<Product item={product} index={index}/>)
            })
          }
       </main>

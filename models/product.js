@@ -17,6 +17,27 @@ module.exports = function(sequelize, DataTypes) {
     tableName: 'product'
   }, {
   });
+//  Product.associate = function(models) {
+//         Product.hasMany(models.Review, {
+//           foreignKey: {
+//             name: 'reviewId',//->
+//             field: 'review_id',//->
+//           }
+//         });
+//       }  
+
+// Product.associate = function(models) {
+//         Product.hasMany(models.LineItem, { 
+//           foreignKey: {
+//             field: 'product_id',
+//             name: 'productId',
+//           }
+//         });
+
+
+//       }
 
   return Product;
 };
+
+
