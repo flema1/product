@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {  Link, Redirect} from 'react-router-dom';
-import * as Ionicons from 'react-icons/lib/md';
+import * as Ionicons from 'react-icons/md';
 import SearchBar from './SearchBar';
 import { connect } from 'react-redux';
 import { logOutUser } from '../actions/authActions';
@@ -78,8 +78,8 @@ import axios from 'axios';
      console.log(currentApiToken, 'currentApiToken');
     if (this.props.isLoginSuccess && currentApiToken || this.props.username ) {
         console.log(currentApiToken, 'currentApiToken2');
-      return ( <div className="menu"><Link to="/profile"><Ionicons.MdPersonOutline width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/></Link>
-        <Ionicons.MdFavoriteOutline width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
+      return ( <div className="menu"><Link to="/profile"><Ionicons.MdFavorite width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/></Link>
+        <Ionicons.MdFavorite width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
         <Ionicons.MdShoppingCart width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
       <a href='http://localhost:3001/logout' >logoutsssss</a>
          {/*<button  href='http://localhost:3001/logout' className="btn btn-primary" onClick={()=>this.props.logOutUser()}>log out</button>*/}
@@ -111,7 +111,7 @@ import axios from 'axios';
     console.log(this.props.isLoginSuccess, "isLoginSuccess")
     if (this.props.isLoginSuccess || this.state.auth) {
             return ( <div className="menu"><Link to="/profile"><Ionicons.MdPersonOutline width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/></Link>
-        <Ionicons.MdFavoriteOutline width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
+        <Ionicons.MdFavorite width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
          <Link to="/cart"><Ionicons.MdShoppingCart width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/></Link>
         <a href='http://localhost:3001/auth/logout' >logout</a>
          {/*<button href='http://localhost:3001/logout' className="btn btn-primary" onClick={()=>this.props.logOutUser()}>log out</button>*/}
