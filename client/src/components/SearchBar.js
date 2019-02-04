@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as Ionicons from 'react-icons/lib/io'
+import * as Ionicons from 'react-icons/io';
 import {Link } from 'react-router-dom'
 // import axios from 'axios';
 // import { connect } from 'react-redux'; 
@@ -47,7 +47,7 @@ export default class SearchBar extends Component {
                 <form >
                     <textarea style={{  borderRadius: '20px',width: '200px', paddingTop:'10px', paddingLeft: '23px', borderColor:'#dcdbdb'}} /*value={value}  onChange={this.onSearchChange.bind(this)}*//>       
                     <a to={'/SearchResults'} style={{ /*marginLeft: '-47px', */marginTop: '-37px' , color:'grey' }}>
-                        <Ionicons.IoSearch width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
+                        <Ionicons.IoIosSearch width={'60px'} height={'2em'} vertical-align={'top'}/*onClick={ this.searchSong.bind(this, this.props.searchValue)}*/ viewBox={"0 -10 50 50"}/>
                     </a>
                 </form>   
             </div>
