@@ -11,6 +11,8 @@ var auth = require('./routes/auth');
 var users = require('./routes/users');
 var products = require('./routes/products');
 var customers = require('./routes/customers');
+var cart = require('./routes/cart');
+
 // var passportGitHub = require('./config/auth/github');
 
 const app = express();
@@ -62,6 +64,9 @@ app.use('/products', products);
 app.use('/customers', customers);
 app.use('/users', users);
 app.use('/auth', auth);
+app.use('/cart', cart);
+
+
 
 app.get('*', (req, res) => {
     const err = new Error('not found!');
